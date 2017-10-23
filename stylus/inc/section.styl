@@ -1,0 +1,362 @@
+.section-top {
+	background-color #e5e5e5
+	color #333333
+	
+	&__container {
+		min-height 35px 
+		display flex
+		justify-content space-between
+		align-items center
+	}
+	
+	&__column {
+		margin 0 5px 
+		
+		&:first-child {
+			margin-left 0 
+		}
+
+		&:last-child {
+			margin-right 0
+		}
+		
+		&_burger {
+			margin-right auto
+		}
+		
+		&_nav {
+		}
+		&_loc {
+			flex none
+		}
+		&_social {
+			flex none
+		}
+	}
+
+	&__nav {
+		font-size 13px
+	}
+	
+	&__burger {
+		margin-right 5px 
+	}
+}
+
+.section-header {
+	&__container {
+		padding 30px 0 20px
+		
+		@supports (flex-wrap wrap) {
+			display flex
+			flex-wrap wrap
+		}
+		
+		@media (min-width $sm) {
+			display flex
+			align-items start
+			
+			&:after {
+				content ""
+				width 1px 
+				background #b8b8b8
+				height 52px 
+				align-self center
+			}
+		}
+	}
+	
+	&__column {
+		margin-right 40px
+	}
+	
+	&__slogan {
+		color #000
+		font-size 9px 
+		text-transform uppercase
+	}
+}
+
+.section-nav {
+	position relative
+	z-index 10
+	background-color #333333
+	color white
+	
+	&__container {
+		display flex
+		align-items center
+	}
+	
+	&__column {
+		&_burger {
+			margin-right 20px 
+		}
+		&_nav {
+			margin-right 5px
+		}
+		
+		&_search {
+			flex auto
+			padding 7px 0
+			max-width 480px 
+			margin-left auto
+		}
+	}
+}
+
+.section-banner {
+	padding 20px 0
+	
+	&__container {
+		@media (min-width $sm) {
+			display flex
+			align-items stretch
+		}
+	}
+	
+	&__column {
+		&_pr {
+			flex none
+			
+			@media (min-width $sm) {
+				width 50%
+			}
+			
+			@media (min-width $lg) {
+				width 590px
+			}
+		}
+		
+		&_desc {
+			flex auto
+			padding 20px
+			
+			@media (min-width $md) {
+				padding 50px
+			}
+		}
+	}
+	
+
+	&__pr {
+		width 100%
+		height auto
+		object-fit cover
+		clip-path ellipse(100% 145% at left center);
+		
+		@media (min-width $md) {
+			min-height 400px
+		}
+	}
+	
+	&__title {
+		margin-bottom 20px 
+	}
+	
+	&__desc {
+		margin-bottom 20px 
+		font-size 15px 
+		line-height 1.2
+		font-weight 300 
+		
+		@media (min-width $md) {
+			margin-bottom 45px 
+			font-size 24px 
+		}
+	}
+	
+	&__button {
+		font-size 14px 
+	}
+	
+	&__banner {
+		margin-bottom 30px
+	}
+	
+	&__logos {
+		margin-bottom 20px 
+		padding 10px 30px
+		background white
+	}
+	
+	&__more {
+		font-size 14px 
+		letter-spacing -0.07px
+		color #3e3e3e
+	}
+}
+
+.section-slider-catalog {
+	border-top 13px solid #4cafdf
+	background-color #c9e9f8
+	padding 40px 0 45px
+	
+	&__title {
+		margin-bottom 20px
+		text-align left
+	}
+	
+	&__hr {
+		margin-bottom 30px
+	}
+	
+	&__slider {
+		margin-bottom 20px
+	}
+}
+
+.section-info {
+	padding 20px 0 
+	color black
+	
+	@media (min-width $sm) {
+		padding 50px 0 
+	}
+	
+	&__title {
+		margin-bottom 20px 
+		
+		@media (min-width $sm) {
+			margin-bottom 50px 
+		}
+	}
+}
+
+.section-edge {
+	padding 20px 0 20px
+	color #000
+	
+	@media (min-width $sm) {
+		padding 20px 0 100px
+	}
+	
+	&__cards {
+		font-size 0
+		
+		@supports(flex-wrap wrap) {
+			display flex
+			flex-wrap wrap
+		}
+	}
+	
+	&__card {
+		display inline-block
+		vertical-align top
+		
+		padding 0 15px 50px
+		@media (min-width $xs) {
+			width 50%
+		}
+		
+		@media (min-width $md) {
+			width 25%
+		}
+	}
+	
+	&__hr {
+		margin-bottom 30px 
+	}
+}
+
+.section-representatives {
+	padding 35px 0 30px
+	text-align center
+	background #ada6a3 url(../images/bg-representatives.jpg) center center / cover
+	
+	
+	&__button {
+		margin-bottom 10px 
+	}
+	
+	&__slogan {
+		font-size 21px 
+		color white
+	}
+}
+
+.inner-news {
+	color #000
+	
+	&__title {
+		margin-bottom 20px
+	}
+	
+	&__place {
+		overflow hidden
+		padding 0 10px 
+		margin 0 -10px 20px
+	}
+	
+	&__cards {
+		padding 15px 0 25px
+		display flex
+		flex auto
+	}
+	
+	&__card {
+		margin 0 15px
+	}
+}
+
+.section-clients {
+	padding 30px 0
+	
+	&__title {
+		margin-bottom 20px	
+	}
+	
+	&__hr {
+		margin-bottom 40px 
+	}
+}
+
+.section-foo {
+	background $color-aluminum 
+	border-bottom 1px solid #dcdcdc
+	
+	&__container {
+		@media (min-width $sm) {
+			display flex
+			justify-content space-between
+			align-items flex-start
+			padding 35px 0
+		}
+	}
+	
+	&__column {
+		padding 10px 0 
+	}
+}
+
+.section-copy {
+	background $color-aluminum 
+	
+	&__container {
+		padding 30px 0
+		color #000000
+		
+		@media (min-width $sm) {
+			display flex
+			justify-content space-between
+			align-items flex-start
+		}
+	}
+	
+	&__column {
+		max-width 320px 
+	}
+	
+	&__title {
+		margin-bottom 10px 
+		font-size 15px
+	}
+	
+	&__desc {
+		font-size 12px
+	}
+	
+	&__stat {
+		font-size 12px
+	}
+}

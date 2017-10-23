@@ -1,0 +1,77 @@
+section.section-top: .container-fluid: .row: .col-xs-12
+	.section-top__container
+		.section-top__column.section-top__column_burger.visible-xs.visible-sm
+			a.unlink.xs-block.section-top__burger(href="#nav-top" data-fancybox): svg.svg(width="22" height="18"): use(xlink:href="images/sprite.svg#burger")
+		.section-top__column.section-top__column_nav.hidden-xs.hidden-sm
+			nav.nav-top.section-top__nav
+				ul.nav-top__list
+					li.nav-top__item: a.link(href="#") О компании
+					li.nav-top__item: a.link(href="#") Новости
+					li.nav-top__item: a.link(href="#") О сварке
+					li.nav-top__item: a.link(href="#") Спец.предложения
+					li.nav-top__item: a.link(href="#") Наши клиенты
+					li.nav-top__item: a.link(href="#") Бренды
+		.section-top__column.section-top__column_loc
+			.your-location.section-top__loc
+				.your-location__label.hidden-xs Ваш регион:
+				.your-location__current(role="button") Московская область
+		.section-top__column.section-top__column_social
+			nav.nav-social.sectin-top__social
+				.nav-social__label.hidden-md.hidden-xs Мы в соц. сетях:
+				ul.nav-social__list
+					li.nav-social__item.nav-social__item_fb: a.unlink(href="#"): svg.svg(width="25" height="25"): use(xlink:href="images/sprite.svg#fb")
+					li.nav-social__item.nav-social__item_vk: a.unlink(href="#"): svg.svg(width="25" height="25"): use(xlink:href="images/sprite.svg#vk")
+					li.nav-social__item.nav-social__item_youtube: a.unlink(href="#"): svg.svg(width="25" height="25"): use(xlink:href="images/sprite.svg#youtube")
+					li.nav-social__item.nav-social__item_instagram: a.unlink(href="#"): svg.svg(width="25" height="25"): use(xlink:href="images/sprite.svg#instagram")
+header.section-header: .container-fluid: .row: .col-xs-12: .section-header__container
+	.section-header__column.section-header__column_logo
+		img.section-header__logo(src="images/logo.png" width="219" height="51" alt="Логотип: РУДЕТРАНС")
+		.section-header__slogan Промышленное сварочное оборудование
+	.section-header__column.section-header__column_contact
+		.section-header__contact.contact-call
+			.contact-call__header.display-sm-block.display-xs-block
+				.contact-call__phone 8(800) 770-0987
+				a.ulink.contact-call__call(href="#" data-fancybox) заказать звонок
+			.contact-call__label (Звонок по России бесплатный)
+			.contact-call__schedule Работаем: Пн-Чт. с 9:00 до 18:00 Пт. с 9:00 до 17:00
+	.section-header__column.section-header__column_write
+		.section-header__write.contact-write
+			.contact-write__email: a.ulink(href="#") info@rudetrans.ru
+			a.button.button_theme_write-email.contact-write__button(role="button") Написать нам
+section.section-nav: .container-fluid: .row: .col-xs-12: .section-nav__container
+	.section-nav__column.section-nav__column_burger.hidden-lg
+			a.unlink.xs-block.section-nav__burger(href="#nav-base" data-fancybox): svg.svg(width="22" height="18"): use(xlink:href="images/sprite.svg#burger")
+	.section-nav__column.section-nav__column_nav.visible-lg
+		nav.section-nav__nav
+			ul.nav-main__list
+				li.nav-main__item.nav-sub-main__trigger(data-toggle-open)
+					.nav-main__link.nav-main__link_icon(role="button")
+						.nav-main__icon: svg.svg(width="22" height="18"): use(xlink:href="images/sprite.svg#burger")
+						| Каталог оборудования
+					ul.nav-sub-main.nav-main__sub
+						-
+							var submains = ['Микросварка', 'Машина контактной сварки с радиальным ходом верхнего электрода', 'Машины контактной сварки с прямолинейным ходом верхнего электрода', 'Промышленные машины контактной сварки', 'Автономные жидкостные охладители (чиллеры)', 'Специальные машины контактной сварки', 'Портальная плазменная резка', 'Клещи контактной сварки', 'Односторонняя точечная сварка', 'Мобильные установки контактной сварки', 'Оборудование электродуговой металлизации', 'Установки плазменной резки', 'Сварочные аппараты TiG', 'Полуавтоматы MiG/MAG', 'Оборудование для автосервиса'];
+							var subsubmains = subsubsubmains = ['Микросварка', 'Машина контактной сварки с радиальным ходом верхнего электрода', 'Машины контактной сварки с прямолинейным ходом верхнего электрода']
+						each submain in submains
+							li.nav-sub-main__item.nav-sub-main__trigger
+								span.nav-sub-main__link(role="button") #{submain}
+								ul.nav-sub-main.nav-sub-main__sub
+									each subsubmain in subsubmains
+										li.nav-sub-main__item.nav-sub-main__trigger
+											a.unlink.nav-sub-main__link(href="#") #{subsubmain}
+											ul.nav-sub-main.nav-sub-main__sub
+												each subsubsubmain in subsubsubmains
+													li.nav-sub-main__item
+														a.unlink.nav-sub-main__link(href="#") #{subsubmain}
+				li.nav-main__item: a.nav-main__link.unlink(href="#") Новости
+				li.nav-main__item: a.nav-main__link.unlink(href="#") Акции
+				li.nav-main__item: a.nav-main__link.unlink(href="#") Спец. предложения
+				li.nav-main__item: a.nav-main__link.unlink(href="#") Наши клиенты
+				li.nav-main__item: a.nav-main__link.unlink(href="#") Бренды
+				li.nav-main__item: a.nav-main__link.unlink(href="#") Контакты
+	.section-nav__column.section-nav__column_search
+		form.sectin-nav__search.search
+			input.search__field(placeholder="Поиск по сайту" type="search")
+			button.search__button: svg.svg(width="21" height="21"): use(xlink:href="images/sprite.svg#loupe")
+
+

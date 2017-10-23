@@ -1,0 +1,41 @@
+.display {
+	&-xs {
+		&-block {
+			@media (max-width ($sm - 1px)) {
+				display block				
+			}
+		}
+	}
+	
+	&-sm {
+		&-block {
+			@media (min-width $sm) and (max-width ($md - 1px)) {
+				display block				
+			}
+		}
+	}
+	
+	&-md {
+		&-block {
+			@media (min-width $md) and (max-width ($lg - 1px)) {
+				display block				
+			}
+		}
+		
+	}
+	
+	&-lg {
+		&-block {
+			@media (min-width $lg){
+				display block				
+			}
+		}
+		
+	}
+}
+
+.col-xxs-12 {
+	@media (max-width ($xs - 1px)) {
+		width 100%
+	}
+}

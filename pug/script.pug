@@ -1,0 +1,30 @@
+.hidden
+	.popup-nav#nav-top
+		nav.nav-popup
+			ul.nav-popup__list
+				li.nav-popup__item: a.nav-popup__link(href="#") О компании
+				li.nav-popup__item: a.nav-popup__link(href="#") Новости
+				li.nav-popup__item: a.nav-popup__link(href="#") О сварке
+				li.nav-popup__item: a.nav-popup__link(href="#") Спец.предложения
+				li.nav-popup__item: a.nav-popup__link(href="#") Наши клиенты
+				li.nav-popup__item: a.nav-popup__link(href="#") Бренды
+				li.nav-popup__item: a.nav-popup__link(href="#" data-fancybox-close) Назад
+
+	.popup-nav#nav-base
+		nav.nav-popup
+			ul.nav-popup__list: each submain in submains
+				li.nav-popup__item
+					a.nav-popup__link(href="#" data-open-next) #{submain}
+					ul.nav-popup__list: each subsubmain in subsubmains
+						li.nav-popup__item
+							a.nav-popup__link(href="#" data-open-next) #{subsubmain}
+							ul.nav-popup__list: each subsubmain in subsubmains
+								li.nav-popup__item
+									a.nav-popup__link(href="#") #{subsubmain}
+
+
+script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/flexMenu/1.4.2/flexmenu.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js")
+script(src="js/main.js")

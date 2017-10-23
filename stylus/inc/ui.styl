@@ -1,0 +1,290 @@
+.button {
+	display inline-block
+	text-decoration none
+	padding 2px 5px
+	border none
+	font-size 14px 
+	
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration none
+	}
+	
+	&_size {
+		&_sm {
+			padding 12px 25px
+			line-height 1 
+			font-size 24px 
+			border-radius 4px
+		}
+		
+		&_lg {
+			padding 12px 25px
+			font-size 30px 
+			line-height 1 
+			font-size 30px 
+			border-radius 8px
+		}
+	}
+	
+	&_theme {
+		&_yellow {
+			background-color #ffde00
+			color #000
+			
+			&:hover,
+			&:focus,
+			&:active {
+				color #000
+				background-color darken(#ffde00, 10%)
+			}
+		}
+		
+		&_write-email {
+			border 1px solid #4cafdf
+			
+			&:hover,
+			&:focus,
+			&:active {
+				color white
+				background #4cafdf
+			}
+		}
+	}
+}
+
+.slick {
+	&-arrow {
+		position absolute
+		top 50%
+		margin-top -21px 
+		z-index 5
+		border none
+		padding 5px
+		color #333
+		background rgba(76, 175, 223, .55)
+		
+		&:hover {
+			background rgba(76, 175, 223, 1)
+		}
+	}
+	
+	&-prev {
+		left -15px
+	}
+	
+	&-next {
+		right -15px
+	}
+	
+	&-dots {
+		list-style-type none
+		padding 0
+		margin 30px 0 0
+		text-align center
+		
+		li {
+			display inline-block
+		}
+		
+		li button {
+			position relative
+			font-size 0
+			line-height 0
+			color transparent
+			padding 0
+			margin 0 3px 
+			border 4px solid #6a747b
+			border-radius 50%
+			width 20px
+			height 20px
+			
+			&:after {
+				content ""
+				display block
+				position absolute
+				top -5px
+				left -5px
+				right -5px
+				bottom -5px
+				z-index 1
+				border-radius 50%
+				border 3px solid white
+			}
+		}
+		
+		li button:hover,
+		li.slick-active button {
+			border 4px solid #4cafdf
+			
+			&:after {
+				display none
+			}
+		}
+	}
+}
+
+.slider_arrow_md {
+	.slick {
+		&-arrow {
+			padding 15px 5px
+			margin-top -31px
+		}
+	}
+}
+
+.slider-manufacturer {
+	background #FFF 
+	padding 0 30px
+	 
+	.slick {
+		&-slide {
+			margin 0 20px 
+		}
+		
+		&-track {
+			display flex
+			align-items center
+		}
+	}
+	
+	&__logo {
+		transition .3s filter, 0.3s opacity
+		opacity 0.3
+		filter grayscale(1)
+			
+		&:hover {
+			opacity 1
+			filter grayscale(0)
+		}
+	}
+}
+
+.slider-catalog {
+	
+	.slick {
+		&-track {
+			display flex
+			align-items stretch
+		}
+		
+		&-slide {
+			height auto
+			margin 0 5px 
+		}
+	}
+}
+
+.your-location {
+	position relative
+	display flex
+	font-size 13px 
+	
+	&__label {
+		margin-right 10px 
+	}
+	
+	&__current {
+		position relative
+		max-width 155px
+		padding-right 15px 
+		color #008dd2
+		letter-spacing -0.07px
+		vertical-align bottom
+		white-space nowrap
+		text-overflow ellipsis
+		overflow hidden
+		
+		&:before {
+			content ""
+			position absolute
+			bottom 0
+			left 0
+			right 15px
+			border-bottom 2px dotted yellow
+		}
+		
+		&:after {
+			position absolute
+			right 0
+			top 20%
+			content "▼"
+			color #333
+			font-size 80%
+		}
+	}
+}
+
+.contact-call {
+	&__header {
+		display flex
+		align-items center
+	}
+	
+	&__phone {
+		margin-right 25px 
+		font-size 24px 
+		color #373737
+	}
+	
+	&__call {
+		font-size 11px
+		text-transform uppercase
+	}
+	
+	&__label {
+		margin-bottom 10px 
+		font-size 11px 
+		letter-spacing -0.06px
+	}
+	
+	&__schedule {
+		margin-bottom 15px 
+		color #008dd2
+		font-size 11px
+	}
+}
+
+.contact-write {
+	&__email {
+		margin-bottom 5px 
+		color #4cafdf
+		font-size 14px 
+	}
+	
+	&__button {
+		border 1px solid #4cafdf
+		border-radius 2px
+		font-size 14px 
+	}
+	
+	&__address {
+		margin-top 10px 
+	}
+}
+
+.search {
+	position relative
+	width 100%
+	
+	&__field {
+		display block
+		height 33px
+		width 100%
+		padding 0 40px 0 20px 
+		border none
+		color #000
+	}
+	
+	&__button {
+		position absolute
+		top 0
+		right 10px
+		bottom 0
+		padding 1px 5px 0
+		background transparent
+		border none
+		color #000
+	}
+}

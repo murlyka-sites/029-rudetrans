@@ -1,0 +1,127 @@
+doctype html
+html(lang="ru")
+	head
+		title Rudetrans - Главная
+		include pug/head
+	body.page
+		include pug/header
+		section.section-banner.bg-smoke-white
+			.container: .row: .col-xs-12
+				.slider-banner.slider_arrow_md.section-banner__banner(data-slider): each i in [1,2]
+					div: .section-banner__container
+						.section-banner__column.section-banner__column_pr
+							img.section-banner__pr(src="images/pr.png")
+						.section-banner__column.section-banner__column_desc
+							h1.h1.section-banner__title Машина контактной точечной сварки L4
+							p.p.section-banner__desc Промышленное надежное оборудование простое в использовании для тонких сварочных процессов в производстве.
+							.text-right
+								a.section-banner__button.button.button_theme_yellow.button_size_sm(href="#") Подробнее
+			
+				.slider-manufacturer.section-banner__logos(data-slider="{\"centerMode\": true, \"variableWidth\": true, \"slidesToShow\": 6 }"): each i in [1,2,3,4,5,1,2,3,5]
+					div: a(href="#"): img.slider-manufacturer__logo(src="images/manufacturer/" + i + ".jpg", alt="")
+				
+				.text-right
+					.sectin-banner__more: a.ulink.link-more(href="#") Все производители
+		section.section-slider-catalog
+			.container-fluid: .row: .col-xs-12
+				h2.h2.section-slider-catalog__title Каталог оборудования
+				hr.hr.bg-white.section-slider-catalog__hr
+				-
+					var slides = [{
+						i: 1,
+						title: "Микросварочное оборудование"
+					},{
+						i: 2,
+						title: "Промышленные машины контактной сварки"
+					},{
+						i: 3,
+						title: "Машины контактной сварки с прямолинейным ходом верхнего электрода"
+					},{
+						i: 4,
+						title: "Мобильные установкиконтактной сварки"
+					}];
+
+				.slider-catalog.section-slider-catalog__slider(data-slider="{\"slidesToShow\": 4, \"responsive\": [{\"breakpoint\": 992, \"settings\": {\"slidesToShow\": 3}}, {\"breakpoint\": 768, \"settings\": {\"slidesToShow\": 2}}, {\"breakpoint\": 550, \"settings\": {\"slidesToShow\": 1}}] }"): each i in [1,2]
+					each slide in slides
+						a.card-product.card-product_hover_false.unlink(href="#")
+							img.card-product__pr.img-responsive(src="images/catalog/" + slide.i + ".png" width="140" height="192")
+							.card-product__title #{slide.title}
+				.text-right
+					a.link-more.ulink(href="#") Весь каталог оборудования
+		section.section-info: .container-fluid: .row: .col-xs-12
+			h2.h2.section-info__title О компании
+			.section-info__desc 
+				p.p РУДЕТРАНССЕРВИС предлагает стационарные машины промышленного применения для контактной сварки (точечная сварка, рельефная сварка, шовная сварка) переменного и постоянного тока, с инверторными преобразователями высокой частоты, машины контактной сварки с радиальным и прямолинейным ходом электродов, клещи контактной точечной сварки, споттеры для односторонней точечной сварки и т.п. В предлагаемом нами оборудовании использованы последние достижения науки и техники в области сварочного оборудования и систем управления: высокочастотные инверторные преобразователи, пневмо- и электро- сервоприводы с возможностью регулирования усилия сжатия электродов в широком диапазоне и с высокой скоростью, блоки управления позволяющие создавать требуемую диаграмму сварочного процесса и изменять параметры самого сварочного процесса в течение его прохождения, автоматически определять условия сварки и осуществлять контроль качества полученного сварочного соединения.
+				.text-right
+					a.link-more.ulink(href="#") Подробнее
+		section.section-edge.bg-smoke-white: .container-fluid: .row: .col-xs-12
+			-
+				var cards = [{
+					i: 1,
+					width: 65,
+					height: 65,
+					title: "Нам доверяют госкомпании",
+					desc: "Уважаемые коллеги! Хотим познакомить Вас с новинкой на Российском рынке - установкой электро-дуговой металлизации PWS HD 4000."
+				},{
+					i: 2,
+					width: 75,
+					height: 65,
+					title: "Прямые поставки от производителей",
+					desc: "Уважаемые коллеги! Хотим познакомить Вас с новинкой на Российском рынке - установкой электро-дуговой металлизации PWS HD 4000."
+				},{
+					i: 3,
+					width: 65,
+					height: 65,
+					title: "Более 10 лет успешной работы",
+					desc: "Уважаемые коллеги! Хотим познакомить Вас с новинкой на Российском рынке - установкой электро-дуговой металлизации PWS HD 4000."
+				},{
+					i: 4,
+					width: 65,
+					height: 65,
+					title: "Нам доверяют госкомпании",
+					desc: "Уважаемые коллеги! Хотим познакомить Вас с новинкой на Российском рынке - установкой электро-дуговой металлизации PWS HD 4000."
+				}]
+			.section-edge__cards: each card in cards
+				.section-edge__card
+					.card-edge
+						.card-edge__pr: svg.svg(width=card.width height=card.height): use(xlink:href="images/edges.svg#e"+card.i)
+						.card-edge__title !{card.title}
+						.card-edge__desc #{card.desc}
+			hr.hr.bg-light-gray.section-edge__hr
+			.inner-news.clearfix.row
+				.col-xxs-12.col-xs-6.col-sm-8.col-md-9
+					h2.h2.inner-news__title Новости
+					-
+						var desc = "Уважаемые коллеги! Хотим познакомить Вас с новинкой на Российском рынке - установкой электро-дуговой металлизации PWS HD 4000.",
+								date = "07.04.2017"
+								slides = [{
+
+						}];
+					.inner-news__place.bg-white: .row: .inner-news__cards(data-slider="{\"slidesToShow\": 3, \"arrows\": false, \"responsive\": [{\"breakpoint\": 992, \"settings\": {\"slidesToShow\":2}},{\"breakpoint\": 768, \"settings\": {\"slidesToShow\":1}}]}"): each i in [1,2,3,1]
+						.inner-news__card.card-news
+							time.card-news__date(datetime=date): a.link(href="#") #{date}
+							a.link(href="#"): img.card-news__pr(src="images/news/" + i + ".jpg" width="265" height="152")
+							.card-news__title: a.link(href="#") #{desc}				
+					.text-right: a.ulink.link-more(href="#") Все новости
+				.col-xxs-12.col-xs-6.col-sm-4.col-md-3
+					h2.h2.inner-news__title События
+					.inner-news__place.bg-white: .row: .inner-news__cards(data-slider="{\"slidesToShow\": 1, \"arrows\": false}"): each i in [1,2,3,1]
+						.inner-news__card.card-news
+							time.card-news__date(datetime=date): a.link(href="#") #{date}
+							a.link(href="#"): img.card-news__pr(src="images/news/" + i + ".jpg" width="265" height="152")
+							.card-news__title: a.link(href="#") #{desc}			
+					.text-right: a.ulink.link-more(href="#") События
+		section.section-representatives: .container-fluid: .row: .col-xs-12
+			a.button.button_theme_yellow.button_size_lg.section-representatives__button(href="#") Региональные представители
+			.section-representatives__slogan Узнайте адрес ближайшего к вам представителя «Рудетранс»
+		section.section-clients: .container-fluid: .row: .col-xs-12
+			h2.h2.section-clients__title Наши клиенты
+			hr.hr.section-clients__hr.bg-light-gray
+			.section-clients__slider.slider-manufacturer(data-slider="{\"centerMode\": true, \"variableWidth\": true, \"slidesToShow\": 5, \"arrows\": false, \"dots\": true}"): each i in [1,2]
+				a.unlink(href="#"): img(src="images/client/1.jpg", alt="" width="252" height="72")
+				a.unlink(href="#"): img(src="images/client/2.jpg", alt="" width="193" height="76")
+				a.unlink(href="#"): img(src="images/client/3.jpg", alt="" width="220" height="70")
+				//- a.unlink(href="#"): img(src="images/client/4.jpg", alt="" width="106" height="106")
+				//- a.unlink(href="#"): img(src="images/client/5.jpg", alt="" width="224" height="61")
+		include pug/foo
+		include pug/script

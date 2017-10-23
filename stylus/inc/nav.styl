@@ -1,0 +1,237 @@
+.nav-top {
+
+	&__list {
+		display flex
+		list-style-type none
+		padding 0
+		margin 0
+	}
+	
+	&__item {
+		margin-right 20px 
+		
+		&:last-child {
+			margin-right 0 
+		}
+	}
+}
+
+.nav-social {
+	display flex
+	align-items center
+	
+	&__label {
+		margin-right 10px
+		font-size 13px
+	}
+	
+	&__list {
+		display flex
+		align-items center
+		list-style-type none
+		margin 0
+		padding 0
+	}
+	
+	&__item {
+		margin-right 4px 
+		line-height 0
+		font-size 0
+		color #b5b5b5
+		opacity 0.8
+		
+		&:hover {
+			opacity 1 
+		}
+		
+		&_fb {
+			color #3A559F
+		}
+		
+		&_vk {
+			color #44678D
+		}
+		
+		&_youtube {
+			color #DC472E
+		}
+		
+		&_instagram {
+			color #C536A4
+		}
+	}
+}
+
+.nav-main {
+	z-index 10
+	
+	&__list {
+		display flex
+		list-style-type none
+		padding 0
+		margin 0
+		position relative
+	}
+	
+	&__item {
+		&:hover,
+		&.active {
+			background #aed7ee 
+		}
+	}
+	
+	&__link {
+		display flex
+		align-items center
+		height 48px
+		font-size 13px 
+		padding 10px
+		line-height 1
+		vertical-align middle
+		text-transform uppercase
+		
+		&_icon {
+			align-items center
+		}
+	}
+	
+	&__icon {
+		margin-right 12px 
+	}
+	
+	&__sub {
+		position absolute
+		top 100%
+		left 0
+		z-index -1
+	}
+}
+
+.nav-sub-main {
+	display none
+	list-style-type none
+	width 280px
+	padding 1px 0 0
+	margin 0
+	background white 
+	color #000000
+	box-shadow 0 0 12px 1px rgba(2, 1, 0, 0.19)
+	
+	&__trigger:hover > & {
+		display block
+	}
+	
+	&__item {
+		padding 0 10px 
+		position relative
+		
+		&:hover {
+			background #d8d8d8
+		}
+		
+		&:hover:before {
+			display block
+			content ""
+			margin-top -1px 
+			width 100%
+			height 1px 
+		}
+	}
+	
+	&__item:hover > &__link:after {
+		content "►"
+	}
+	
+	&__link {
+		display block
+		padding 10px
+		position relative
+		border-bottom 1px solid #d8d8d8
+		
+		&:after {
+			content "▼"
+			font-size 80%
+			position absolute
+			top 15px  
+			right 3px
+			color #bcbcbc
+		}
+	}
+	
+	&__item:last-child &__link {
+		border-bottom none
+	}
+	
+	&__sub {
+		position absolute
+		top 0
+		left 100%
+		z-index -1
+	}
+}
+
+.nav-foo {
+	&__list {
+		padding 0
+		margin 0 
+		list-style-type none
+		columns 2 150px
+	}
+	
+	&__item {
+		padding-bottom 15px 
+		
+		&:last-child {
+			padding-bottom 0 
+		}
+	}
+}
+
+.nav-popup {
+	font-size 15px 
+	
+	&__list {
+		list-style-type none
+		padding 0
+		margin 0
+		background white 
+	}
+	
+	&__item {
+		border-bottom 1px solid #d8d8d8
+		
+		&:hover,
+		&.active {
+			background #D8D8D8 
+		}
+		
+		&.active {
+			border-bottom white 
+		}
+		
+	}
+	
+	&__link {
+		position relative		
+		display block
+		padding 10px 0
+		margin 0 15px 0 
+		color #000
+		
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration none
+			color #000
+		}
+	}
+	
+	&__item > &__list {
+		display none
+		box-shadow  inset 0px 0px 15px 0px rgba(50, 50, 50, 0.5);
+	}
+	
+	&__item.active > &__list {
+		display block
+	}
+}
