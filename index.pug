@@ -111,17 +111,7 @@ html(lang="ru")
 							a.link(href="#"): img.card-news__pr(src="images/news/" + i + ".jpg" width="265" height="152")
 							.card-news__title: a.link(href="#") #{desc}			
 					.text-right: a.ulink.link-more(href="#") События
-		section.section-representatives: .container-fluid: .row: .col-xs-12
-			a.button.button_theme_yellow.button_size_lg.section-representatives__button(href="#") Региональные представители
-			.section-representatives__slogan Узнайте адрес ближайшего к вам представителя «Рудетранс»
-		section.section-clients: .container-fluid: .row: .col-xs-12
-			h2.h2.section-clients__title Наши клиенты
-			hr.hr.section-clients__hr.bg-light-gray
-			.section-clients__slider.slider-manufacturer(data-slider="{\"centerMode\": true, \"variableWidth\": true, \"slidesToShow\": 5, \"arrows\": false, \"dots\": true}"): each i in [1,2]
-				a.unlink(href="#"): img(src="images/client/1.jpg", alt="" width="252" height="72")
-				a.unlink(href="#"): img(src="images/client/2.jpg", alt="" width="193" height="76")
-				a.unlink(href="#"): img(src="images/client/3.jpg", alt="" width="220" height="70")
-				//- a.unlink(href="#"): img(src="images/client/4.jpg", alt="" width="106" height="106")
-				//- a.unlink(href="#"): img(src="images/client/5.jpg", alt="" width="224" height="61")
+		include pug/representatives
+		include pug/clients
 		include pug/foo
 		include pug/script
