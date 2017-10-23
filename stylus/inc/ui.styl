@@ -19,6 +19,13 @@
 			border-radius 4px
 		}
 		
+		&_md {
+			border-radius 3px
+			padding 16px 
+			font-size 16px 
+			line-height 1 
+		}
+		
 		&_lg {
 			padding 12px 25px
 			font-size 30px 
@@ -26,6 +33,11 @@
 			font-size 30px 
 			border-radius 8px
 		}
+	}
+	
+	&_available {
+		display block
+		width 100%
 	}
 	
 	&_theme {
@@ -49,6 +61,17 @@
 			&:active {
 				color white
 				background #4cafdf
+			}
+		}
+		
+		&_snow {
+			background $color-snow  
+			border 1px solid #aed7ee
+			
+			&:hover,
+			&:focus,
+			&:active {
+				background darken($color-snow, 15%)
 			}
 		}
 	}
@@ -286,5 +309,102 @@
 		background transparent
 		border none
 		color #000
+	}
+}
+
+.contact-info {
+	
+	&__group {
+		margin-bottom 20px 
+		
+		@media (min-width $sm) {
+			margin-bottom 40px 
+		}
+	}
+	
+	&__phone {
+		font-size 20px 
+		color #1195d5
+		
+		@media (min-width $sm) {
+			font-size 30px 
+		}
+	}
+	
+	&__email {
+		color #1195d5
+	}
+	
+	&__label-phone {
+		font-size 14px
+		color #373737
+	}
+	
+	&__text {
+		line-height 2 
+	}
+	
+	&__more {
+		color #1195d5
+	}
+}
+
+.select-with-contact {
+	display block
+	width 100%
+	height 48px
+	padding 10px 
+	border 1px solid #dedede
+	background-color #f6f6f6
+}
+
+.field {
+	display block
+	width 100%
+	height 50px	
+	border 1px solid #cccccc
+	border-radius 3px
+	padding 5px 15px
+}
+
+.textarea {
+	display block
+	width 100%
+	height 125px
+	border 1px solid #cccccc
+	border-radius 3px
+	padding 5px 15px
+}
+
+.requisites {
+	&__title {
+		margin-bottom 30px 
+	}
+	
+	&__p {
+		margin 0 0 20px 
+		font-size 14px 
+		line-height 1.5 
+	}
+	
+	&__link {
+		color #00a2ff
+	}
+}
+
+.form-with-contact {
+	padding 15px 0
+	
+	@media (min-width $sm) {
+		padding 30px 15px 
+	}
+}
+
+.form-group {
+	&__label {
+		color #626262
+		font-size 14px 
+		font-weight 400 
+		line-height 24px 
 	}
 }

@@ -5,5 +5,106 @@ html(lang="ru")
 		include pug/head
 	body.page
 		include pug/header
+		.bg-aluminum
+			.section-breadcrumbs: .container-fluid: .row: .col-xs-12: nav.nav-breadcrumbs: ul.nav-breadcrumbs__list
+				li.nav-breadcrumbs__item: a.nav-breadcrumbs__link.ulink(href="#") Главная
+				li.nav-breadcrumbs__item Контакты
+
+			.section-contact: .container-fluid: .row: .col-xs-12
+				h2.h2.section-contact__title Контактная информация
+				hr.hr.section-contact__hr.bg-light-gray
+				.section-contact__container
+					.section-contact__column.section-contact__column_info
+						.contact-info
+							.contact-info__group
+								.contact-info__phone 8 (800) 770-09-87
+								.contact-info__label (Звонок по России бесплатный)
+							.contact-info__group
+								.contact-info__email: a.unlink(href="#") info@rudetrans.ru
+							.contact-info__group
+								select.select-with-contact
+									option Центральный офис
+									option Центральный офис
+									option Центральный офис
+							.contact-info__group
+								.contact-info__text 173025, г. Великий Новгород, ул. Нехинская, д. 55
+							.contact-info__group
+								.contact-info__text 
+									| Телефон:	+7 (8162) 99-87-77
+									br
+									| Факс: +7 (8162) 94-09-66
+							.contact-info__group
+								.contact-info__more: a.ulink(href="#") Больше телефонов
+
+					.section-contact__column.section-contact__column_map: div(style="background: gray; height: 550px")
+			
+			.section-communication: .container-fluid: .row: .col-xs-12
+				.section-communication__container
+					.section-communication__column.section-communication__column_requisites
+						.requisites
+							h2.h2.requisites__title Наши реквизиты
+							.requisites__desc
+								p.requisites__p
+									| ООО "РТС"
+									br
+									| Юридический адрес: 173025, г. Великий Новгород,
+									br
+									| ул. Нехинская, д. 55, тел. 8-800-770-09-87
+								h3.h3
+									| Реквизиты:
+								p.requisites__p
+									| ИНН 5321132569
+									br
+									| КПП532101001
+									br
+									| БИК 044959698
+									br
+									| ОГРН 1095321001456
+									br
+									| Отделение №8629 Сбербанка России
+									br
+									| г. Великий Новгород
+									br
+									| к/с 30101810100000000698
+									br
+									| р/с 40702810443000000796
+								p.requisites__link: a.ulink(href="#") Скачать реквизиты
+								
+					.section-communication__column.section-communication__column_form
+						.form-with-contact
+							.clearfix
+								.col-sm-6
+									.form-group
+										label.form-group__label Имя
+										.form-group__field
+											input.field(type="text")
+								.col-sm-6
+									.form-group
+										label.form-group__label Телефон
+										.form-group__field
+											input.field(type="text")
+							.clearfix
+								.col-sm-6
+									.form-group
+										label.form-group__label E-mail
+										.form-group__field
+											input.field(type="text")
+								.col-sm-6
+									.form-group
+										label.form-group__label Вложение
+										.form-group__field
+											input.field(type="text")
+							.clearfix
+								.col-xs-12
+									.form-group
+										label.form-group__label Сообщение
+										.form-group__field
+											input.textarea(type="text")
+							.clearfix
+								.col-sm-6.col-sm-offset-6 
+									button.button_size_md.button_theme_snow.visible-block.button_available Оставить заявку
+
+
+
 		include pug/foo
 		include pug/script

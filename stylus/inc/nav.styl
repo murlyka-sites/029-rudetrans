@@ -235,3 +235,37 @@
 		display block
 	}
 }
+
+.nav-breadcrumbs {
+	&__list {
+		display flex
+		padding 0
+		margin 0
+		list-style-type none
+		font-size 13px
+		
+	}
+	
+	&__item {
+		&:after {
+			content "►"
+			margin 0 10px
+			color #1195d5 
+			font-size 80% 
+		}
+		
+		&:last-child:after {
+			content none
+		}
+	}
+	
+	&__link {
+		color #828282
+		
+		&:hover,
+		&:focus,
+		&:active {
+			color #828282
+		}
+	}
+}
