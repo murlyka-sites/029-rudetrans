@@ -4,20 +4,28 @@
 	border 1px solid #efefef
 	padding 30px 
 	background white
+	text-align center
+	animation 3s open
 	
+	&:hover {
+		z-index 10 
+	}
 	
-	
-	&:hover:after {
+	&:after {
 		content ""
-		display block
 		position absolute
-		top -10px
-		left -10px
-		right -10px
-		bottom -10px 
+		top -15px
+		left -15px
+		right -15px
+		bottom -15px 
 		box-shadow: 0 0 9px 1px rgba(2, 1, 0, 0.18);
 		border 10px solid #aed7ee
-		z-index 10 
+		z-index -1
+		background white
+	}
+	
+	&:hover:after {
+		display block
 	}
 	
 	&_hover_false {
@@ -33,6 +41,25 @@
 		outline-offset -10px
 	}
 	
+	&__panel {
+		display flex
+		align-items center
+		justify-content flex-end
+		margin-bottom 20px
+	}
+	
+	&__panel-button {
+		margin-right 15px 
+		
+		&:hover {
+			color #008dd2
+		}
+		
+		&:last-child {
+			margin-right 0 
+		}
+	}
+	
 	&__pr {
 		display block
 		margin 0 auto 35px
@@ -45,6 +72,17 @@
 		overflow hidden
 	}
 	
+	&__button {
+		margin 10px 0
+		font-size 18px 
+		padding 8px 25px
+	}
+	
+
+	&__link {
+		font-size 13px 
+		color #008dd2
+	}
 }
 
 .card-edge {
@@ -100,5 +138,15 @@
 		width 100%
 		height auto
 		margin-bottom 10px 
+	}
+}
+
+.card-rec {
+	&__pr {
+		margin 0 auto 5px
+	}
+	
+	&__title {
+		text-align center
 	}
 }

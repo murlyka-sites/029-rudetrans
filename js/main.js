@@ -30,4 +30,60 @@ $(document).ready(function(){
 
 		$(this).parent().toggleClass(toggleClass)
 	});
+
+	(function range($range, $from, $to) {
+		var $parent = $range.closest(".range"),
+				$from = $parent.find(".range__from"),
+				$to = $parent.find(".range__to");
+
+		$range.ionRangeSlider({
+			type: "double",
+			hide_from_to: true,
+			onChange: function (data) {
+				$from.val(data.from);
+				$to.val(data.to);
+			}
+		});
+
+		$to.change(function () {
+			$range.data("ionRangeSlider").update({
+				to: $(this).val()
+			});
+		})
+
+		$from.change(function () {
+			$range.data("ionRangeSlider").update({
+				from: $(this).val()
+			});
+		})
+	})($("input[type=range]"));
+
+	var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 10,
+  });
+
+  var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 4,
+		touchRatio: 0.2,
+		centeredSlides: true,
+		slideToClickedSlide: true
+	});
+
+	galleryTop.controller.control = galleryThumbs;
+	galleryThumbs.controller.control = galleryTop;
+
+	new Swiper('.nav-tabs .swiper-container', {
+		slidesPerView: 6,
+		breakpoints: {
+
+			992: {
+				slidesPerView: 'auto',
+				// pagination: {
+				// 	el: '.swiper-pagination',
+				// 	type: 'progressbar',
+				// }
+			}
+		}
+	})
 });

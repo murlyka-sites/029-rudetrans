@@ -238,18 +238,19 @@
 
 .nav-breadcrumbs {
 	&__list {
-		display flex
 		padding 0
 		margin 0
 		list-style-type none
-		font-size 13px
-		
+		font-size 0
 	}
 	
 	&__item {
+		display inline
+		font-size 13px
+		
 		&:after {
 			content "►"
-			margin 0 10px
+			margin 0 5px
 			color #1195d5 
 			font-size 80% 
 		}
@@ -269,3 +270,150 @@
 		}
 	}
 }
+
+.nav-pagination {
+	&__list {
+		list-style-type none
+		padding 0
+		margin 0
+		
+		@supports (flex-wrap wrap) {
+			display flex
+			justify-content center
+			flex-wrap wrap
+			align-items center
+		}
+		
+		@media (min-width $sm) {
+			flex-wrap nowrap
+		}
+	}
+	
+	&__item {
+		display inline-block
+		margin 5px 
+		color #323232
+		
+		@media (min-width $sm) {
+			margin 5px 10px
+		}
+		
+		&_prev {
+			margin-left 0
+			color #bababa
+			
+			@media (min-width $sm) {
+				margin-right auto 
+			}
+		}
+		
+		&_next {
+			margin-right 0
+			color #bababa
+			
+			@media (min-width $sm) {
+				margin-left auto
+			}
+		}
+	}
+	
+	&__link {
+		display flex
+		align-items center
+		justify-content center
+		width 40px 
+		height 40px
+		border 1px solid #dedede
+		text-decoration none
+		color inherit
+		
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			text-decoration none
+			background-color #78c3e7
+			border-color #78c3e7
+			color white
+		}
+	}
+}
+
+.nav-tabs {
+	position relative
+	margin 0
+	border-bottom none
+	background-color #eaeaea
+	
+	&__icon {
+		position absolute
+		bottom -30px
+		z-index 5		 
+		pointer-events none
+		animation 5s infinite horizontal-scroll
+	}
+	
+	&__list {
+		padding 0
+		margin 0
+		list-style-type none
+		align-items stretch
+	}
+		
+	&__item {
+		display flex
+		align-items center
+		justify-content center
+		border-top 5px solid transparent 
+		height auto
+		width auto
+		
+		&.active {
+			background white 
+			
+			@media (min-width $md) {
+				border-top 5px solid #00a2ff
+			}
+		}
+	}
+	
+	&__link {
+		display block
+		padding 20px 10px
+		margin-top -5px
+		text-align center
+		
+		text-decoration none
+		color inherit
+		
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration none
+			color inherit
+		}
+		
+	}
+}
+
+// @keyframes horizontal-scroll {
+// 	from {
+// 		transform translate(200px, 20px)
+// 		opacity 0
+// 	}
+	
+// 	20% {
+// 		transform translate(200px, 0)
+// 		color red
+// 		display none
+		
+// 	}
+	
+// 	20% {
+// 		opacity 1
+// 	}
+	
+// 	30% {
+// 		translate(50px, 20px)
+// 	}
+// }

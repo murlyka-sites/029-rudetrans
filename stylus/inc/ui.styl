@@ -3,7 +3,8 @@
 	text-decoration none
 	padding 2px 5px
 	border none
-	font-size 14px 
+	font-size 14px
+	text-align center
 	
 	&:hover,
 	&:focus,
@@ -67,11 +68,52 @@
 		&_snow {
 			background $color-snow  
 			border 1px solid #aed7ee
+			color #3e3e3e
 			
 			&:hover,
 			&:focus,
 			&:active {
 				background darken($color-snow, 15%)
+				color #3e3e3e
+			}
+		}
+		
+		&_white {
+			border 1px solid #aed7ee
+			background-color #ffffff
+			color #3e3e3e
+			
+			&:hover,
+			&:focus,
+			&:active {
+				background darken($color-snow, 15%)
+				color #3e3e3e
+			}
+		}
+		
+		&_cloudy {
+			border 1px solid $color-cloudy
+			background-color $color-cloudy
+			color #3e3e3e
+			
+			&:hover,
+			&:focus,
+			&:active {
+				background darken($color-cloudy, 15%)
+				color #3e3e3e
+			}
+		}
+		
+		&_gray {
+			border 1px solid #cccccc
+			background-color #eaeaea
+			color #3e3e3e
+			
+			&:hover,
+			&:focus,
+			&:active {
+				background darken(#eaeaea, 15%)
+				color #3e3e3e
 			}
 		}
 	}
@@ -422,4 +464,289 @@
 		font-weight 400 
 		line-height 24px 
 	}
+}
+
+.group-aside {
+	border-bottom 1px solid #D6D6D6
+	
+	&__title {
+		position relative
+		padding-right 10px 
+		
+		&:hover {
+			opacity 0.8
+		}
+		
+		&:after {
+			content "▼"
+			position absolute
+			right 0 
+			font-size 80% 
+			color #bababa
+		}
+	}
+	
+	&__body {		
+		display none
+		padding 15px 0
+	}
+	
+	&.open &__title {
+		&:after {
+			content "▲"
+			color #008dd2
+		}
+	}
+	
+	&.open &__body {
+		display block
+	}
+}
+
+.inline-flex {
+	display inline-flex
+	align-items center
+	
+	&__icon {
+		margin-right 5px 
+	}
+	
+	&__text {}
+}
+
+.flex {
+	display flex
+	align-items center
+	
+	&__icon {
+		margin-right 10px
+	}
+	
+	&__checkbox {
+		margin-right 5px 
+	}
+}
+
+.checkbox {
+	display flex
+	align-items center
+	justify-content center
+	width 20px
+	height 20px
+	border 1px solid #d1d1d1
+	color transparent
+	transition 0.3s color
+	cursor pointer
+	margin 0
+}
+
+input[type="checkbox"] {
+	display none
+}
+
+input[type="checkbox"]:checked + .checkbox {
+	color #008dd2
+}
+
+.aside-filter {
+	padding 20px
+	border 1px solid #efefef
+	background-color #ffffff
+	
+	&__group {
+		margin-bottom 10px 
+	}
+	
+	&__foo {
+		text-align center
+	}
+	
+	&__result {
+		margin-bottom 10px 
+	}
+	
+	&__button {
+		margin-bottom 10px 
+		font-size 18px 
+		padding 8px 25px
+	}
+	
+	&__reset {
+		color #78c3e7
+		font-size 12px 
+		background transparent
+		border none
+		padding none
+	}
+}
+
+.range {
+	font-size 18px 
+	font-weight 400
+	 
+	&__fields {
+		display flex
+		justify-content space-between
+		align-items center
+		white-space nowrap
+	}
+	
+	&__field {
+		margin 0 5px
+		height 40px
+		
+		&:first-child {
+			margin-left 0
+		}
+	}
+}
+
+.irs {
+	margin-top -14px
+	margin-bottom 10px
+}
+.irs-bar,
+.irs-bar-edge {
+	height 5px
+	background #008dd2
+	border none
+	border-radius 0
+}
+.irs-line {
+	height 5px
+	border-radius 0
+	border none
+	background #dadada
+}
+.irs-slider {
+	width 17px
+	height 17px
+	top 26px
+	box-shadow 0 2px 5px rgba(0, 0, 1, 0.26)
+	background #333333
+	border none
+	
+	&:hover,
+	&.state_hover {
+		background #333333 !important
+	}
+}
+.irs-min,
+.irs-max {
+	top auto
+	bottom -10px
+	color #878787
+	background transparent
+	font-size 12px
+	font-weight 400
+}
+
+
+.flex-buttons {
+	
+	
+	@media (min-width $sm) {
+		display flex
+		align-items stretch
+		justify-content space-between
+	}
+	
+	&__item {
+		margin 5px
+		display flex
+		justify-content center
+		align-items center
+		
+		@media (min-width $sm) {
+			width 340px
+			margin 0 10px
+			
+			&:first-child {
+				margin-left 0 
+			}
+			
+			&:last-child {
+				margin-right 0
+			}
+		}
+	}
+}
+
+.swiper-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-top {
+  width: 100%;
+}
+
+.gallery-thumbs {
+	padding: 10px 0;
+}
+.gallery-thumbs .swiper-slide {
+	border 1px solid #ebebeb
+}
+.gallery-thumbs .swiper-slide-active {
+ 
+	border 1px solid #4cafdf
+}
+
+.swipe-slide {
+	
+}
+
+.swiper-slide-active {
+}
+
+.text-and-bugs {
+	display flex
+	align-items center
+	
+	&__text {
+		color #1195d5
+	}
+	
+	&__bugs {		
+		
+		margin-left 15px 
+	}
+	
+	&:hover &__text {
+		// color $color-aqua
+	}
+
+	&:hover &__bugs {
+		// background $color-aqua
+	}
+}
+
+.bugs {
+	display flex
+	justify-content center
+	align-items center
+	width 28px
+	height 28px
+	border-radius 50%
+	background #1195d5
+	color white		
+}
+
+.control-with-card {
+	display flex
+	
+	&:hover {
+		color $color-aqua
+		
+		.bugs {
+			background $color-aqua 
+		}
+	}
+	
+	&__icon {
+		width 40px
+		text-align center
+	}
+	
 }

@@ -5,5 +5,215 @@ html(lang="ru")
 		include pug/head
 	body.page
 		include pug/header
+		.bg-aluminum
+			.section-breadcrumbs: .container-fluid: .row: .col-xs-12
+				nav.nav-breadcrumbs: ul.nav-breadcrumbs__list
+					li.nav-breadcrumbs__item: a.nav-breadcrumbs__link(href="#") Главная
+					li.nav-breadcrumbs__item: a.nav-breadcrumbs__link(href="#") Каталог оборудования
+					li.nav-breadcrumbs__item Машина контактной сварки с радиальным ходом верхнего электрода
+		
+			.section-catalog-filter: .container-fluid
+				.row
+					.col-xs-12
+						h2.h2.section-catalog-filter__title Каталог оборудования
+						hr.hr.section-catalog-filter__hr.bg-light-gray
+						.section-catalog-filter__buttons.flex-buttons
+							a.button.button_size_md.button_theme_white.flex-buttons__item(href="#") Заявка на оборудование
+							a.button.button_size_md.button_theme_white.flex-buttons__item(href="#") Запросить комерческое предложение
+							a.button.button_size_md.button_theme_white.flex-buttons__item(href="#") 
+								.inline-flex
+									svg.svg.inline-flex__icon(width="16" height="16"): use(xlink:href="images/sprite.svg#phone")
+									.inline-flex__text Обратный звонок
+				.row: .col-xs-12
+					.col-xs-12.col-md-4.col-lg-3: .row
+						aside.aside.aside-filter.section-catalog-filter__aside: form
+							.aside-filter__group.group-aside.open
+								h4.h4.group-aside__title(role="button" data-toggle-parent="open") Цена
+								.group-aside__body
+									.range
+										.range__fields
+											input.range__field.range__from.field(type="number" value="2500")
+											|  ₽ — 
+											input.range__field.range__to.field(type="number" value="7500")
+											|  ₽
+										input(type="range")
+
+							.aside-filter__group.group-aside.open
+								h4.h4.group-aside__title(role="button" data-toggle-parent="open") тИП ПРИВОДА
+								.group-aside__body 
+									select.select-with-contact
+										option Пневматический
+										option Пневматический
+										option Пневматический
+
+							.aside-filter__group.group-aside.open
+								h4.h4.group-aside__title(role="button" data-toggle-parent="open") Сжатие, даН
+								.group-aside__body 
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 220
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 360
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 420
+
+							.aside-filter__group.group-aside.open
+								h4.h4.group-aside__title(role="button" data-toggle-parent="open") н/у сталь, мм
+								.group-aside__body 
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 2,5 + 2,5
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 3,5 + 3,5
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										|	5,0 + 5,0
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 6,0 + 6,0
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 7,0 + 7,0
+								
+							.aside-filter__group.group-aside.open
+								h4.h4.group-aside__title(role="button" data-toggle-parent="open") Наибольший ток КЗ, кА
+								.group-aside__body 
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 9,1
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 11,2
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										|	15
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 20
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 25
+								
+							.aside-filter__group.group-aside.open
+								h4.h4.group-aside__title(role="button" data-toggle-parent="open") Al, мм
+								.group-aside__body 
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 6 + 6
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										|8 + 8
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										|	12 + 12
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 16 + 16
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 17 + 17
+								
+							.aside-filter__group.group-aside.open
+								h4.h4.group-aside__title(role="button" data-toggle-parent="open") Арматура, мм
+								.group-aside__body 
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 6 + 6
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										|8 + 8
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										|	12 + 12
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 16 + 16
+									label.flex 
+										.flex__checkbox
+											input(data-checkbox type="checkbox")
+											.checkbox: svg.svg(width="13" height="16"): use(xlink:href="images/sprite.svg#checkbox")
+										| 17 + 17
+							footer.aside-filter__foo
+								.aside-filter__result Подобрано вариантов - 4
+								button.button.button_theme_snow.button_size_sm.aside-filter__button Показать
+								button.aside-filter__reset(type="reset"): .ulink Сбросить результаты
+
+
+					.col-xs-12.col-md-8.col-lg-9: .row
+						main.main.section-catalog-filter__main
+							.section-catalog-filter__cards: each i in [1,2,3,4, 1,2,3,4, 1,2,3,4]
+								.section-catalog-filter__card: .card-product
+									.card-product__panel.panel-with-card
+										.card-product__panel-button(role="button"): svg.svg(width="22" height="20"): use(xlink:href="images/sprite.svg#heart")
+										.card-product__panel-button(role="button"): svg.svg(width="24" height="15"): use(xlink:href="images/sprite.svg#add")
+
+									img.card-product__pr.img-responsive(src="images/catalog/1.png" width="140" height="192")
+									.card-product__title Машина контактной сварки с механическим ножным приводом SF 102, Dalex
+									a.button.button_size_sm.button_theme_cloudy.card-product__button(href="#") Подробнее
+									.card-product__link: a.ulink(href="#") Заявка на оборудование
+							nav.section-catalog-filter__pagination.nav-pagination
+								ul.nav-pagination__list
+									li.nav-pagination__item.nav-pagination__item_prev: a.nav-pagination__link(href="#") ◄
+									li.nav-pagination__item: a.nav-pagination__link(href="#") 1
+									li.nav-pagination__item: a.nav-pagination__link(href="#") 2
+									li.nav-pagination__item: a.nav-pagination__link(href="#") 3
+									li.nav-pagination__item: a.nav-pagination__link(href="#") 4
+									li.nav-pagination__item: a.nav-pagination__link(href="#") 5
+									li.nav-pagination__item: a.nav-pagination__link(href="#") 6
+									li.nav-pagination__item: a.nav-pagination__link(href="#") 7
+									li.nav-pagination__item.nav-pagination__item_next: a.nav-pagination__link(href="#") ►
 		include pug/foo
 		include pug/script
+
+
+
+
+
+

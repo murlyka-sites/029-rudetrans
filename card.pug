@@ -5,5 +5,241 @@ html(lang="ru")
 		include pug/head
 	body.page
 		include pug/header
+		.bg-aluminum
+			section.section-breadcrumbs: .container-fluid: .row: .col-xs-12
+				nav.nav-breadcrumbs: ul.nav-breadcrumbs__list
+					li.nav-breadcrumbs__item: a.nav-breadcrumbs__link(href="#") Главная
+					li.nav-breadcrumbs__item: a.nav-breadcrumbs__link(href="#") Каталог оборудования
+					li.nav-breadcrumbs__item: a.nav-breadcrumbs__link(href="#") Машина контактной сварки с радиальным ходом верхнего электрода
+					li.nav-breadcrumbs__item Машина контактной сварки с механическим ножным приводом SF 202, Dalex
+			section.section-card: .container-fluid
+				.row: .col-xs-12
+					h2.h2.section-card__title Каталог оборудования
+					hr.hr.section-card__hr.bg-light-gray
+					.section-card__buttons.flex-buttons
+						a.button.button_size_md.button_theme_white.flex-buttons__item(href="#") Заявка на оборудование
+						a.button.button_size_md.button_theme_white.flex-buttons__item(href="#") Запросить комерческое предложение
+						a.button.button_size_md.button_theme_white.flex-buttons__item(href="#") 
+							.inline-flex
+								svg.svg.inline-flex__icon(width="16" height="16"): use(xlink:href="images/sprite.svg#phone")
+								.inline-flex__text Обратный звонок
+					.section-card__container
+						.section-card__column.section-card__column_pr
+							.swiper-container.gallery-top
+								.swiper-wrapper: each i in [1,2,3,4]
+									.swiper-slide: img.section-card__pr.img-responsive(src="images/card.jpg")
+							.swiper-container.gallery-thumbs
+								.swiper-wrapper: each i in [1,2,3,4]
+									.swiper-slide: img.img-responsive(src="images/card.jpg")
+
+						.section-card__column.section-card__column_manufacturer
+							.clearfix: img.pull-right.section-card__logo(src="images/card-logo.jpg")
+							.section-card__title Машина контактной сварки с пневмоприводом PL 40, Dalex
+							.section-card__desc Машины предназначены для контактной точечной сварки изделий низкоуглеродистой и хромо-никелевой стали, а также из тонколистового алюминия и латуни.
+							.flex.file-download
+								.flex__icon.file-download__column.file-download__column_icon: svg.svg(width="35" height="46"): use(xlink:href="images/sprite.svg#pdf")
+								.file-download__column.file-download__column_text
+									div Каталога радиальных машин 
+									.text-aqua: a.ulink(href="#") Скачать (5641.18 KB)
+							.flex.file-download
+								.flex__icon.file-download__column.file-download__column_icon: svg.svg(width="35" height="46"): use(xlink:href="images/sprite.svg#pdf")
+								.file-download__column.file-download__column_text
+									div Технические характеристики
+									.text-aqua: a.ulink(href="#") Скачать(228.51 KB)
+						.section-card__column.section-card__column_controls
+							.section-card__controls
+								.section-card__control.control-with-card
+									.control-with-card__icon: svg.svg(width="24" height="15"): use(xlink:href="images/sprite.svg#add")
+									a.unlink.flex__text(href="#") Добавить в сравнение
+
+								.section-card__control.control-with-card
+									.control-with-card__icon: svg.svg(width="22" height="20"): use(xlink:href="images/sprite.svg#heart")
+									a.unlink.flex__text(href="#") Добавить в закладки
+
+								.section-card__control.control-with-card
+									.control-with-card__icon: svg.svg(width="16" height="20"): use(xlink:href="images/sprite.svg#target")
+
+									a.unlink.flex__text(href="#")
+										.text-and-bugs.control-with-card
+											.text-and-bugs__text Клиенты в вашем регионе
+											.text-and-bugs__bugs.bugs 1
+
+								.section-card__control.control-with-card
+									.control-with-card__icon: svg.svg(width="18" height="18"): use(xlink:href="images/sprite.svg#share")
+									a.unlink.flex__text(href="#") Поделиться
+
+							a.button.button_size_md.button_theme_snow.section-card__button(href="#") Оставить заявку
+							a.button.button_size_md.button_theme_gray.section-card__button(href="#") Оставить заявку
+							
+							.section-card__order
+								.section-card__order-label Заказать сейчас за
+								.section-card__order-value 355 551 руб.
+			section.section-tabs: .container-fluid: .row: .col-xs-12
+				nav.nav-tabs
+					.swiper-container
+						.swiper-pagination
+						ul.nav-tabs__list.swiper-wrapper
+							li.nav-tabs__item.swiper-slide.active: a.nav-tabs__link(href="#p1" data-toggle="tab") Техническое описание
+							li.nav-tabs__item.swiper-slide: a.nav-tabs__link(href="#p2" data-toggle="tab") Характеристики
+							li.nav-tabs__item.swiper-slide: a.nav-tabs__link(href="#p3" data-toggle="tab") Варианты поставки
+							li.nav-tabs__item.swiper-slide: a.nav-tabs__link(href="#p4" data-toggle="tab") Документация
+							li.nav-tabs__item.swiper-slide: a.nav-tabs__link(href="#p5" data-toggle="tab") Сопутствующие товары
+							li.nav-tabs__item.swiper-slide: a.nav-tabs__link(href="#p6" data-toggle="tab") Отзывы (2)
+					svg.svg.nav-tabs__icon(width="40" height="40"): use(xlink:href="images/sprite.svg#horizontal-scroll")
+				.tab-content
+					-
+						var tabs = [{
+							id: "p1",
+							cls: "in active"
+						},
+						{
+							id: "p2",
+							cls: ""
+						},
+						{
+							id: "p3",
+							cls: ""
+						},
+						{
+							id: "p4",
+							cls: ""
+						},
+						{
+							id: "p5",
+							cls: ""
+						},
+						{
+							id: "p6",
+							cls: ""
+						}]
+					each tab in tabs
+						.section-tabs__content.tab-pane.bg-white.fade(id=tab.id "class"=tab.cls)
+							ul.ul
+								li.li синхронный, 1- временной блок управления, работает с тиристорным ступенчатым усилителем
+								li.li плавная регулировка сварочной нагрузки
+								li.li цифровая установка тока и времени
+								li.li термоконтакты для защиты от перегрузки
+								li.li электрододержатель регулируется по вертикали
+								li.li плавная регулировка длины хобота (вылет)
+								li.li главный выключатель согласно норм VDE 0113
+								li.li 3 м электрический кабель, без штекера
+								li.li соответствует нормам VDE 0545-1, EN 60204-1, EN 50 240, EN 292 части 1+2, EN 1050
+								li.li CE - знак
+							.table-wrap-900: table.table-wrap-900__table.table: tbody.tbody
+								tr.tr
+									th.th.text-uppercase.text-center(colspan=3) Технические данные * согласно DIN 44753 / ISO 669
+									th.th.text-center SL 202
+								tr.tr
+									td.td(colspan=2) Вылет электродов
+									td.td.text-center мм
+									td.td.text-center 130 - 500
+								tr.tr
+									th.th.text-center.text-uppercase(colspan=4): h3.h3 Электрическая часть
+								tr.tr
+									td.td(rowspan=3) Возможности машины 
+									td.td Номин. потребляемая мощность (50% ED)
+									td.td.text-center кВА
+									td.td.text-center 20
+								tr.tr
+									td.td Наибольшая мощность корот. замыкания
+									td.td.text-center кВА
+									td.td.text-center 14,1
+								tr.tr
+									td.td Наибольшая сварочная мощность
+									td.td.text-center кВА
+									td.td.text-center 56,8
+
+
+								tr.tr
+									td.td Электрическое напряжение
+									td.td Вторичное напряжение холостого хода
+									td.td.text-center В
+									td.td.text-center 3,7
+
+								tr.tr
+									td.td(rowspan="3") Подключение к электрической сети
+									td.td Номин. потребляемая мощность (50% ED)
+									td.td.text-center кВА
+									td.td.text-center 20
+								tr.tr
+									td.td Наибольшая мощность корот. замыкания
+									td.td.text-center кВА
+									td.td.text-center 14,1
+								tr.tr
+									td.td Наибольшая сварочная мощность
+									td.td.text-center кВА
+									td.td.text-center 56,8
+
+								tr.tr
+									th.th.text-center.text-uppercase(colspan=4): h3.h3 Операционная часть
+
+								tr.tr
+									td.td(rowspan=3) Подключение к электрической сети
+									td.td Лист из низко-углеродистой стали с содержанием углерода меньше = 0,2 %
+									td.td.text-center мм
+									td.td.text-center 4 + 4 max. 5 + 5
+
+								tr.tr
+									td.td Лист из хромо-никелевой стали
+									td.td.text-center мм
+									td.td.text-center 0,75 + 0,75
+
+								tr.tr
+									td.td Круглые стержни из стали Ø C-содержание меньше = 0,2 %
+									td.td.text-center мм
+									td.td.text-center 8 + 8 max. 12 + 12
+							
+
+							//- 
+								tr.tr
+									td.td 
+									td.td
+									td.td
+
+			section.section-rec: .container-fluid: .row: .col-xs-12
+				h4.h4.section-rec__title Варианты поставки:
+				.bg-white.section-rec__slider.slider-rec.slider-flex-center.slider-indents-20(data-slider="{\"slidesToShow\": 5, \"responsive\": [{\"breakpoint\": 992, \"settings\": { \"slidesToShow\": 4}},{\"breakpoint\": 800, \"settings\": { \"slidesToShow\": 3}}, {\"breakpoint\": 600, \"settings\": {\"slidesToShow\": 2}},{\"breakpoint\": 400, \"settings\": {\"slidesToShow\": 1}}]}"): each i in [1,2,3,4,5,6]
+					.card-rec
+						img.card-rec__pr.img-responsive(src="images/rec.jpg")
+						.card-rec__title: a.link(href="#") Точечный электрод "А" для машин контактной сварки
+			section.section-rec: .container-fluid: .row: .col-xs-12
+				h4.h4.section-rec__title Варианты поставки:
+				.bg-white.section-rec__slider.slider-rec.slider-flex-center.slider-indents-20(data-slider="{\"slidesToShow\": 5, \"responsive\": [{\"breakpoint\": 992, \"settings\": { \"slidesToShow\": 4}},{\"breakpoint\": 800, \"settings\": { \"slidesToShow\": 3}}, {\"breakpoint\": 600, \"settings\": {\"slidesToShow\": 2}},{\"breakpoint\": 400, \"settings\": {\"slidesToShow\": 1}}]}"): each i in [1,2,3,4,5,6]
+					.card-rec
+						img.card-rec__pr.img-responsive(src="images/rec.jpg")
+						.card-rec__title: a.link(href="#") Точечный электрод "А" для машин контактной сварки
+				.text-right: a.link-more.link(href="#") Все электроды
+			section.section-write: .container-fluid
+				.row: .col-xs-12
+					h2.h2.section-write__title Отправить сообщение
+					hr.hr.section-write__hr
+
+					.section-write__container
+						.clearfix
+							.col-sm-4
+								.form-group
+									label.form-group__label Имя
+									.form-group__field
+										input.field(type="text")
+							.col-sm-4
+								.form-group
+									label.form-group__label Телефон
+									.form-group__field
+										input.field(type="text")
+							.clearfix
+								.col-sm-4
+									.form-group
+										label.form-group__label E-mail
+										.form-group__field
+											input.field(type="text")
+							.clearfix
+								.col-xs-12
+									.form-group
+										label.form-group__label Сообщение
+										.form-group__field
+											input.textarea(type="text")
+							.clearfix
+								.col-sm-4.col-sm-offset-4 
+									button.button_size_md.button_theme_snow.visible-block.button_available Оставить заявку
 		include pug/foo
 		include pug/script

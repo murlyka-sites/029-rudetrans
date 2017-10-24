@@ -29,6 +29,12 @@
 	font-weight 700 
 }
 
+.h4 {
+	font-size 14px 
+	font-weight 400
+	text-transform uppercase 
+}
+
 .p {
 	margin-bottom 10px 
 	font-size 16px 
@@ -52,6 +58,10 @@
 		font-size 120%
 		margin-right 10px  
 	}
+}
+
+label {
+	font-weight 400 
 }
 
 .svg {
@@ -112,5 +122,51 @@
 	&:active {
 		color inherit
 		text-decoration none
+	}
+}
+
+.table {
+	border-collapse collapse
+	
+	&>.tbody>.tr>td,
+	&>.tbody>.tr>th {
+		border none
+		border 1px solid #e1e1e1
+		border-collapse collapse
+	}
+	
+	&>.tbody>.tr>th {
+		background-color #eaeaea
+		
+	}
+	
+	&>.tbody>.tr>.td {
+		background white 
+	}
+	
+	&>.tbody>.tr:nth-child(even)>.td {
+		background #f8f8f8
+	}
+}
+
+.table>tr>th {
+	font-size 16px 
+	font-weight 700 
+}
+
+.table>.tr {
+	// background-color #ffffff !important
+	// border-bottom 1px solid #e1e1e1 !important
+	
+	&:nth-child(even) {
+		background #f8f8f8 
+	}
+}
+
+.table-wrap-900 {
+	overflow auto
+	
+	&__table {
+		min-width 900px
 	}
 }

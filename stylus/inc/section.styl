@@ -144,6 +144,7 @@
 		height auto
 		object-fit cover
 		clip-path ellipse(100% 145% at left center);
+		transition 0.3s clip-path
 		
 		@media (min-width $md) {
 			min-height 400px
@@ -484,3 +485,195 @@
 	}
 }
 
+.section-catalog-filter {
+	padding 20px 0
+	
+	&__title {
+		margin-bottom 20px 
+	}
+	
+	&__hr {
+		margin-bottom 15px 
+	}
+	
+	&__buttons {
+		margin-bottom 15px 
+	}
+	
+	&__aside {
+		margin 0 5px 20px
+		
+		@media (min-width $md) {
+			margin-bottom 0
+		}
+	}
+	
+	&__main {
+		margin 0 5px 
+	}
+	
+	&__cards {
+		font-size 0
+		margin 0 -5px 20px
+	}
+	
+	&__card {
+		display inline-block
+		vertical-align top
+		padding 0 5px
+		margin-bottom 10px 
+		width 100%
+		
+		@media (min-width $xs) {
+				width 50%
+		}
+		
+		@media (min-width $lg) {
+			width 33.333% 
+		}
+	}
+}
+
+.section-card {
+	padding 20px 0
+	
+	&__title {
+		margin-bottom 20px 
+	}
+	
+	&__hr {
+		margin-bottom 15px 
+	}
+	
+	&__buttons {
+		margin-bottom 15px 
+	}
+	
+	&__container {
+		padding 30px 0
+		background white 
+		
+		@media (min-width $sm) {
+			@supports (flex-wrap wrap) {
+				display flex
+				flex-wrap wrap
+			}
+		}
+		
+		@media (min-width $md) {
+			display flex
+			flex-wrap nowrap 
+		}
+	}
+	
+	&__column {
+		padding 0 15px 
+		
+		&:last-child {
+			border-right none 
+		}
+		
+		@media (min-width $sm) {
+			border-right 2px solid #E1E1E1 
+			flex 1 0
+		}
+		
+		@media (max-width ($md - 1px)) {
+			&:first-child {
+				border-right none
+				margin-bottom 20px 
+			}
+		}
+
+		&_pr {
+			min-width 0
+			flex 1 2 480px
+		}
+		
+		&_manufacturer {
+			flex 1 1 310px
+		}
+		
+		&_controls {
+			flex 1 1 320px
+		}
+	}
+	
+	&__pr {
+		width 100%
+		height auto
+	}
+	
+	&__title {
+		margin-bottom 25px 
+		font-size 24px 
+		font-weight 700 
+	}
+	
+	&__desc {
+		margin-bottom 30px 
+		font-size 14px 
+	}
+	
+	&__controls {
+		margin-bottom 80px 
+	}
+	
+	&__control {
+		margin 10px 0
+	}
+	
+	&__button {
+		display block
+		margin 10px 0
+	}
+	
+	&__order {
+		padding 10px
+		border-radius 5px
+		background-color #ffde02
+		text-align center
+		
+		&-label {
+			font-size 16px 
+		}
+		
+		&-value {
+			font-size 36px 
+		}
+	}
+}
+
+.section-rec {
+	padding 20px 0
+	
+	&__title {
+		margin 0 0 15px
+	}
+	&__slider {
+		padding 20px 0
+		margin-bottom 25px 
+	}
+}
+
+.section-write {
+	padding 20px 0
+	
+	&__title {
+		text-align center
+	} 
+	
+	&__hr {
+		margin-bottom 30px 
+	}
+}
+
+.section-tabs {
+	&__content {
+		padding 30px 10px
+		
+		@media (min-width $sm) {
+			padding 30px 
+		}
+	}
+}
