@@ -84,7 +84,33 @@ html(lang="ru")
 						p Пистолет-распылитель для электродуговой металлизации цинком, алюминием и цинк-алюминием.Один из самых легких и надежных пистолетов в классе антикоррозийной металлизации больших поверхностей. Имеет пневмодвигатель и функцию автоматического выключения (dead men system). Пневмодвигатель обеспечивает высокую, стабильную скорость подачи проволоки в зону распыления на расстояние до 20метров.
 						p Преимуществом этого пистолета является простота эксплуатации - все компоненты могут быть быстро заменены оператором на месте производства работ.
 						p Толщина наносимого покрытия варьируется в широких пределах - от 0.1 до 20 мм. При этом его плотность составляет 90 - 97%.
+			section.section-gallery
+				.container-fluid: .row: .col-xs-12
+					h2.h2.section-gallery__title Галерея
+					hr.hr.bg-light-gray.section-gallery__hr
+					-
+						var desc = [
+							"PMS 38-6 MF DALEX-машина контактной сварки",
+							"PMS 38-6 MF DALEX-машина контактной сварки с среднечастотным трансформатором на 1000 Гц",
+							"PMS 38-6 MF DALEX-машина контактной сварки",
+							"PMS 38-6 MF DALEX-машина контактной сварки"]
+							date = "07.04.2017"
+							slides = [{
 
+						}];
+					.section-gallery__slider(data-slider="{\"slidesToShow\": 4, \"arrows\": false, \"responsive\": [{\"breakpoint\": 992, \"settings\": {\"slidesToShow\":3}},{\"breakpoint\": 768, \"settings\": {\"slidesToShow\":2}},{\"breakpoint\": 480, \"settings\": {\"slidesToShow\":1}}]}")
+						each i in [0,1,2,3]
+							.gutter-6: .card-gallery.section-gallery__card
+								a.card-gallery__pr.unlink(href="#")
+									img.card-gallery__image(src="images/gallery/" + 1 + ".jpg" width="275" height="235")
+									.card-gallery__inner
+										.card-gallery__count
+											| 12
+											svg.svg.card-gallery__count-icon(width="23" height="23"): use(xlink:href="images/sprite.svg#collage")
+										.card-gallery__eye
+											svg.svg(width="53" height="57"): use(xlink:href="images/sprite.svg#eye")
+										.card-gallery__view ПРОСМОТР
+								.card-gallery__title: a.unlink(href="#" tabindex="-1") #{desc[i]}
 						
 		//- section.section-slider-catalog
 		//- 	.container-fluid: .row: .col-xs-12
