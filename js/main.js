@@ -70,9 +70,9 @@ $(document).ready(function(){
 		slideToClickedSlide: true
 	});
 
-	galleryTop.controller.control = galleryThumbs;
-	galleryThumbs.controller.control = galleryTop;
-
+	// TODO: Исправить ошибку
+  // galleryTop.controller.control = galleryThumbs;
+	// galleryThumbs.controller.control = galleryTop;
 	new Swiper('.nav-tabs .swiper-container', {
 		slidesPerView: 6,
 		breakpoints: {
@@ -86,4 +86,52 @@ $(document).ready(function(){
 			}
 		}
 	})
+
+	var sliderGalleryCaption = new Swiper('.slider-gallery-caption .swiper-container', {
+	});
+
+	var sliderGalleryPr = new Swiper('.slider-gallery-pr .swiper-container', {
+		navigation: {
+			prevEl: '.slider-gallery__pr .swiper-prev',
+			nextEl: '.slider-gallery__pr .swiper-next'
+		},
+		on: {
+			slideChange: function (e) {
+				sliderGalleryCaption.slideTo(this.activeIndex)
+			}
+		}
+	});
+
+	var sliderGalleryThumb = new Swiper('.slider-gallery-thumb .swiper-container', {
+		loop: true,
+		slidesPerView: 6,
+		spaceBetween: 6,
+		navigation: {
+			prevEl: '.slider-gallery-thumb .slider-gallery-thumb__prev',
+			nextEl: '.slider-gallery-thumb .slider-gallery-thumb__next'
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 4
+			},
+			768: {
+				slidesPerView: 3
+			},
+			600: {
+				slidesPerView: 2
+			}
+		}
+	});
+
+	$(".slider-gallery-thumb .swiper-slide").click(function(){
+		var index = $(this).data('swiper-slide-index');
+		sliderGalleryPr.slideTo(index)
+	});
+
+	// sliderGalleryPr.on('slideChange', function (e) {
+	// 	console.log(e);
+	// });
+	 // = sliderGalleryCaption;
+	
+	// sliderGalleryCaption.controller.control = sliderGalleryPr;
 });

@@ -1,5 +1,17 @@
 <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
+		<symbol viewBox="0 0 26 26" id="resize">
+			<image width="26" height="26" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAAXNSR0IB2cksfwAAAEVQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3Orq9wAAABd0Uk5TAGyIg4FrQ15aVkKHRFNYYGpnV1A3Smi5gQxtAAAAh0lEQVR4nJ2SyxKDMAwDVQUaHCBQHv3/T63T9oZ8YQ+57MijzAi48KCTuv5q8Mx5MLdCNQrHpI1xMp0yGmapKiuwKNUywCrUN+NFXiKz6Wr/a4r9d01xnJG5wXlEZuMemLi1Mu/S3qr+wzW8xiXIuJrDBrQp6pZGFm3gq7IhZ6X7LrVJikF+AJSWA11zRgtKAAAAAElFTkSuQmCC"></image>
+		</symbol>
+
+		<symbol viewBox="0 0 47 87" id="gallery-prev">
+			<path d="M44 01.57l1.41 1.42-41 41.01 41 41.01-1.41 1.42-42.43-42.43 1.42-1.41z"/>
+		</symbol>
+
+		<symbol viewBox="0 0 47 87" id="gallery-next">
+			<path d="M3.41 85.99l-1.42-1.42 41.16-41.07-41.16-41.07 1.42-1.42 41.16 41.07 1.42 1.42-1.42 1.42z"/>
+		</symbol>
+
 		<symbol id="horizontal-scroll" viewBox="0 0 368.416 368.416">
 			<path d="M262.843,44.673h37.364c-3.809,3.913-3.782,10.169,0.091,14.042c1.953,1.952,4.512,2.929,7.071,2.929
 		c2.559,0,5.119-0.977,7.071-2.929l16.971-16.971c3.905-3.905,3.905-10.237,0-14.143l-16.971-16.971

@@ -111,7 +111,29 @@ html(lang="ru")
 											svg.svg(width="53" height="57"): use(xlink:href="images/sprite.svg#eye")
 										.card-gallery__view ПРОСМОТР
 								.card-gallery__title: a.unlink(href="#" tabindex="-1") #{desc[i]}
-						
+		section.section-slider-gallery
+			.container-fluid: .row: .col-xs-12
+				.slider-gallery
+					.slider-gallery__pr.slider-gallery-pr
+						svg.svg.slider-gallery-pr__resize(width="26" height="26"): use(xlink:href="images/sprite.svg#resize")
+						.swiper-container: .swiper-wrapper: each i in [1,2,3,4,5,6,7,8,9,0]
+							.swiper-slide: a(href="images/slider-gallery.jpg" data-fancybox): img.img-fully(src="images/slider-gallery.jpg" width="900" height="530")
+						button.slider-gallery-pr__prev.swiper-prev: svg.svg(width="44" height="85"): use(xlink:href="images/sprite.svg#gallery-prev")
+						button.slider-gallery-pr__next.swiper-next: svg.svg(width="44" height="85"): use(xlink:href="images/sprite.svg#gallery-next")
+					.slider-gallery-caption: .swiper-container: .swiper-wrapper: each i in [1,2,3,4,5,6,7,8,9,0]
+							.swiper-slide PMS 38-6 MF DALEX-машина контактной сварки с среднечастотным трансформатором на 1000 Гц
+					.slider-gallery-thumb
+						.swiper-container: .swiper-wrapper: each i in [1,2,3,4,5,6,7,8,9,0]
+							.swiper-slide: img.img-fully(src="images/slider-gallery.jpg" width="900" height="530")
+						button.slider-gallery-thumb__prev.slick-prev.slick-arrow(aria-label="Previous" type="button")
+							svg.svg(width="30" height="28")
+								use(xlink:href="images/sprite.svg#prev")
+						button.slider-gallery-thumb__next.slick-next.slick-arrow(aria-label="Previous" type="button")
+							svg.svg(width="30" height="28")
+								use(xlink:href="images/sprite.svg#next")
+					
+
+
 		//- section.section-slider-catalog
 		//- 	.container-fluid: .row: .col-xs-12
 		//- 		h2.h2.section-slider-catalog__title Каталог оборудования

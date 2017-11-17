@@ -8,3 +8,106 @@
 @import "inc/section"
 @import "inc/popup"
 @import "inc/framework"
+
+.section-slider-gallery {
+	padding 45px 0 70px
+	background #E7E6E6 
+}
+
+.slider-gallery {
+	&__pr {
+	}
+	
+	&__arrow {
+		padding 0
+		background transparent
+		border none
+		
+	}
+}
+
+.slider-gallery-pr {
+	position relative
+	margin 0 0 10px
+	width auto
+	box-shadow: 0 0 45px 4px rgba(2, 1, 0, 0.18);
+	
+	@media (min-width $md) {
+		margin 0 125px 10px
+	}
+	
+	&__resize {
+		position absolute
+		top 10px
+		right 10px
+		z-index 5
+	}
+	
+	&__prev,
+	&__next {
+		position absolute
+		top 50%
+		z-index 5
+		transform translate(0, -50%)
+	}
+	
+	&__prev {
+		left 0
+		
+		@media (min-width $md) {
+			left -125px
+		}
+	}
+	
+	&__next {
+		right 0
+		
+		@media (min-width $md) {
+			right -125px
+		}
+	}
+}
+
+.slider-gallery-caption {
+	padding 10px 
+	text-align center
+	margin 0 10px 25px
+	width auto
+	background rgba(255, 255, 255, 0.5) 
+	
+
+		
+	@media (min-width $md) {
+		margin 0 135px 25px
+	}
+}
+
+.slider-gallery-thumb {
+	position relative
+	margin 0 10px
+	
+	@media (min-width $md) {
+		margin 0 135px
+	}
+	
+	.swiper-slide {
+		cursor pointer
+	}
+}
+
+.swiper {
+	&-prev,
+	&-next {
+		padding 0
+		background transparent
+		border none
+		
+		&:hover {
+			opacity 0.85
+		}
+	}
+}
+
+.swiper-button-disabled {
+	opacity 0.5 
+}
