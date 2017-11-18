@@ -1,27 +1,66 @@
 .hidden
-	.popup-nav#nav-top
+	.popup.popup-contact#popup-contact
+		.popup__title.gutter-15 Контакты
 		nav.nav-popup
 			ul.nav-popup__list
-				li.nav-popup__item: a.nav-popup__link(href="#") О компании
-				li.nav-popup__item: a.nav-popup__link(href="#") Новости
-				li.nav-popup__item: a.nav-popup__link(href="#") О сварке
-				li.nav-popup__item: a.nav-popup__link(href="#") Спец.предложения
-				li.nav-popup__item: a.nav-popup__link(href="#") Наши клиенты
-				li.nav-popup__item: a.nav-popup__link(href="#") Бренды
-				li.nav-popup__item: a.nav-popup__link(href="#" data-fancybox-close) Назад
+				li.nav-popup__item.gutter-h-15.gutter-v-10
+					| Работаем: Пн-Чт. с 9:00 до 18:00 Пт. с 9:00 до 17:00
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="tel:88007700987")
+					| 8(800) 770-0987
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10
+					| Заказать звонок
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10
+					| info@rudetrans.ru
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10
+					| Написать нам
+				li.nav-popup__item.gutter-h-15.gutter-v-10
+					nav.nav-social
+						ul.nav-social__list
+							li.nav-social__item.nav-social__item_fb: a.unlink(href="#"): svg.svg(width="25" height="25"): use(xlink:href="images/sprite.svg#fb")
+							li.nav-social__item.nav-social__item_vk: a.unlink(href="#"): svg.svg(width="25" height="25"): use(xlink:href="images/sprite.svg#vk")
+							li.nav-social__item.nav-social__item_youtube: a.unlink(href="#"): svg.svg(width="25" height="25"): use(xlink:href="images/sprite.svg#youtube")
+							li.nav-social__item.nav-social__item_instagram: a.unlink(href="#"): svg.svg(width="25" height="25"): use(xlink:href="images/sprite.svg#instagram")
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(data-fancybox-close) Назад
+	
+	.popup.popup-contact#popup-region
+		.popup__title.gutter-15 Ваш регион
+		nav.nav-popup: .nav-popup__list
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") Москва
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") Новосибирская область
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") Ростовская область
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") Омская область
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") Оренбургская область
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") Орловская область
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") Пензенская область
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") Пермский край
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") Псковская область
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(data-fancybox-close) Назад
+	
+	.popup#popup-nav
+		.popup__title.gutter-15 Навигация
+		nav.nav-popup: ul.nav-popup__list
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10 О компании
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10 Новости
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10 О сварке
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10 Спец.предложения
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10 Наши клиенты
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10 Бренды
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(data-fancybox-close) Назад
 
-	.popup-nav#nav-base
+	.popup.popup-contact#popup-catalog
+		.popup__title.gutter-15 Каталог оборудования
+		nav.nav-popup: ul.nav-popup__list
+			each submain in submains
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(href="#") #{submain}
+			li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(data-fancybox-close) Назад 
+	
+	.popup-nav#popup-menu
 		nav.nav-popup
-			ul.nav-popup__list: each submain in submains
-				li.nav-popup__item
-					a.nav-popup__link(href="#" data-open-next) #{submain}
-					ul.nav-popup__list: each subsubmain in subsubmains
-						li.nav-popup__item
-							a.nav-popup__link(href="#" data-open-next) #{subsubmain}
-							ul.nav-popup__list: each subsubmain in subsubmains
-								li.nav-popup__item
-									a.nav-popup__link(href="#") #{subsubmain}
-
+			ul.nav-popup__list
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(data-fancybox href="#popup-contact") Контакты
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(data-fancybox href="#popup-region") Ваш регион
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(data-fancybox href="#popup-nav") Навигация
+				li.nav-popup__item: a.nav-popup__link.gutter-h-15.gutter-v-10(data-fancybox href="#popup-catalog") Каталог оборудования
 
 script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")

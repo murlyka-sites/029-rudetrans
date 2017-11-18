@@ -1,7 +1,5 @@
 section.section-top: .container-fluid: .row: .col-xs-12
 	.section-top__container
-		.section-top__column.section-top__column_burger.visible-xs.visible-sm
-			a.unlink.xs-block.section-top__burger(href="#nav-top" data-fancybox): svg.svg(width="22" height="18"): use(xlink:href="images/sprite.svg#burger")
 		.section-top__column.section-top__column_nav.hidden-xs.hidden-sm
 			nav.nav-top.section-top__nav
 				ul.nav-top__list
@@ -27,21 +25,21 @@ header.section-header: .container-fluid: .row: .col-xs-12: .section-header__cont
 	.section-header__column.section-header__column_logo
 		img.section-header__logo(src="images/logo.png" width="219" height="51" alt="Логотип: РУДЕТРАНС")
 		.section-header__slogan Промышленное сварочное оборудование
-	.section-header__column.section-header__column_contact
+	.hidden-xs.section-header__column.section-header__column_contact
 		.section-header__contact.contact-call
 			.contact-call__header.display-sm-block.display-xs-block
 				.contact-call__phone 8(800) 770-0987
 				a.ulink.contact-call__call(href="#" data-fancybox) заказать звонок
 			.contact-call__label (Звонок по России бесплатный)
 			.contact-call__schedule Работаем: Пн-Чт. с 9:00 до 18:00 Пт. с 9:00 до 17:00
-	.section-header__column.section-header__column_write
+	.hidden-xs.section-header__column.section-header__column_write
 		.section-header__write.contact-write
 			.contact-write__email: a.ulink(href="#") info@rudetrans.ru
 			a.button.button_theme_write-email.contact-write__button(role="button") Написать нам
 section.section-nav: .container-fluid: .row: .col-xs-12: .section-nav__container
-	.section-nav__column.section-nav__column_burger.hidden-lg
-			a.unlink.xs-block.section-nav__burger(href="#nav-base" data-fancybox): svg.svg(width="22" height="18"): use(xlink:href="images/sprite.svg#burger")
-	.section-nav__column.section-nav__column_nav.visible-lg
+	.section-nav__column.section-nav__column_burger.visible-xs.visible-sm
+			a.unlink.xs-block.section-nav__burger(href="#popup-menu" data-fancybox): svg.svg(width="22" height="18"): use(xlink:href="images/sprite.svg#burger")
+	.section-nav__column.section-nav__column_nav.visible-md.visible-lg
 		nav.section-nav__nav
 			ul.nav-main__list
 				li.nav-main__item.nav-sub-main__trigger(data-toggle-open)

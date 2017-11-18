@@ -22,7 +22,8 @@ $(document).ready(function(){
 	});
 
 	$("[data-fancybox]").fancybox({
-		autoFocus: false
+		autoFocus: false,
+		margin: [0, 0]
 	})
 
 	$("[data-toggle-parent]").click(function() {
